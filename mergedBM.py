@@ -350,7 +350,7 @@ if 'hybrid_plan_out_bm' in st.session_state:
     st.subheader("📝 Pratonton Draf AI (Format Melayu Bersih)")
     st.text_area("Kandungan", st.session_state['hybrid_plan_out_bm'], height=400)
     doc_file = create_word_export(u_topic, u_syllabus, st.session_state['hybrid_plan_out_bm'])
-    st.download_button("📥 Muat Turun ke Versi Word (.docx)", doc_file, f"Gabungan_Universal_PEDATI_{u_topic}.docx")
+    st.download_button("📥 Muat Turun ke Versi Word (.docx)", doc_file, f"RMH_Merge_{u_topic}.docx")
 
 st.markdown("---")
-st.caption("Lesson Planner Hybrid v4.0 | Pembangun: Hjh Nurul Haziqah Hj Nordin | © 2026 PTES Academic Innovation")
+st.caption("Lesson Planner Hybrid v4.0 | Pencipta: Hjh Nurul Haziqah Hj Nordin | © 2026 PTES Academic Innovation")
