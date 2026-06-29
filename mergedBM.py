@@ -167,7 +167,7 @@ def create_word_export(topic, syllabus, text):
         add_page_number(header_run)
 
     # Peraturan 2 & 8: Tajuk Utama dalam HURUF BESAR (Saiz Font 14)
-    main_title = f'PTES RANCANGAN PENGAJARAN GABUNGAN UNIVERSAL & PEDATI: {topic}'.upper()
+    main_title = f'PTES RANCANGAN MENGAJAR GABUNGAN: {topic}'.upper()
     title_p = doc.add_paragraph()
     title_run = title_p.add_run(main_title)
     title_run.font.size = Pt(14)
@@ -337,7 +337,7 @@ with c1: u_topic = st.text_input("Topik Pelajaran:")
 with c2: u_syllabus = st.text_input("Kod Sukatan Pelajaran:")
 u_extra = st.text_area("Konteks Tambahan / Pilihan (Opsional):")
 
-if st.button("🚀 JANA RANCANGAN PENGAJARAN LENGKAP"):
+if st.button("🚀 JANA RANCANGAN MENGAJAR LENGKAP"):
     if u_topic and u_syllabus:
         with st.spinner("AI sedang membina rancangan pengajaran berstruktur hibrid..."):
             result = generate_advanced_plan_bm(u_topic, u_syllabus, u_extra)
@@ -347,7 +347,7 @@ if st.button("🚀 JANA RANCANGAN PENGAJARAN LENGKAP"):
 
 if 'hybrid_plan_out_bm' in st.session_state:
     st.divider()
-    st.subheader("📝 Pratonton Draf AI (Format Melayu Bersih)")
+    st.subheader("📝 Pratonton Draf Plan (Bahasa Melayu)")
     st.text_area("Kandungan", st.session_state['hybrid_plan_out_bm'], height=400)
     doc_file = create_word_export(u_topic, u_syllabus, st.session_state['hybrid_plan_out_bm'])
     st.download_button("📥 Muat Turun ke Versi Word (.docx)", doc_file, f"RMH_Merge_{u_topic}.docx")
