@@ -329,7 +329,7 @@ def create_word_export(topic, syllabus, text):
 # --- 4. GRAPHICAL USER INTERFACE (GUI) ---
 st.set_page_config(page_title="Penjana Gabungan Universal & PEDATI", layout="wide")
 
-st.title("🎓 PTES Perancang Pengajaran Universal & PEDATI (Versi BM)")
+st.title("🎓 PTES Rancangan Mengajar Universal & PEDATI")
 st.info("Masukkan topik pelajaran, kod sukatan subjek dan maklumat tambahan untuk menjana rancangan pengajaran hibrid versi Bahasa Melayu murni.")
 
 c1, c2 = st.columns(2)
